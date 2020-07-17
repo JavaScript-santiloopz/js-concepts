@@ -1,6 +1,10 @@
 # Scopes and Closures
 
 
+### Closures
+They are functions with 'memory' about the environment where they were created, simply known as: a Closure.  
+This is because the function inspects it's environment and closes over the variables that it needs to remember for future use. The references to the variables are closed in a special data structure that can only be accessed by the Javascript runtime itself.
+
 ### Modules and encapsulation
 Take a look at this ES5 code:
 ```javascript
