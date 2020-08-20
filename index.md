@@ -9,3 +9,4 @@
 1. [Namespaces](./namespaces.md)
 1. [Browser API](./browser-api.md)
 1. [NodeJS](./nodejs.md)
+1. [SPAs](./spa.md)
