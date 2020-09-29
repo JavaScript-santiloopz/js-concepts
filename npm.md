@@ -8,6 +8,12 @@ npm config set save-prefix='~'
 ```
 And from then on, you got it.
 
+### Update dependencies globally
+Run 
+```bash
+npm update -g
+```
+
 ### Run multiple npm scripts at once
 Run
 ```bash
