@@ -25,6 +25,12 @@ superhero.fly = flyFunction;
 superhero.fly();
 ```
 
+### Set
+Creates a set, or collection of non reapeated elements (removed duplicates).
+```javascript
+const mySet = new Set([1, 1, 2, 3, 4]); // keeps 1, 2, 3, 4
+```
+
 ### Promises
 
 ###### How to avoid `callback hell`. 
