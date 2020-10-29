@@ -9,6 +9,8 @@ const superhero = {};
 superhero.name = 'Superman';  
 superhero.strength = 100;
 ```
+* `Object.freeze(objRef);`
+To avoid property mutation on a certain object.
 
 ### Function
 Functions in Javascript are just values of type `Function`, it's a simple as that! 
