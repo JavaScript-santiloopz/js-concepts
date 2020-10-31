@@ -2,7 +2,7 @@
 
 
 1. [Architectures](architectures.md)
-1. [Array High Order Functions ?? TODO](array-high-order-funcs.md)
+1. [Array High Order Functions](array-high-order-funcs.md)
 1. [Async](async.md)
 1. [Browser API](browser-api.md)
 1. [Chaining](chaining.md)
