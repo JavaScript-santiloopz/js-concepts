@@ -28,3 +28,9 @@ var superHeroPrototype = {
 var superman = Object.create(superHeroPrototype);  
 superman.name = 'Superman';
 ```
+
+### Cloning
+There are different ways:
+```javascript
+const newObj = Object.assign({}, objToClone);
+```
