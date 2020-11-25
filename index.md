@@ -7,6 +7,8 @@
 1. [Browser API](browser-api.md)
 1. [Chaining](chaining.md)
 1. [DOM](dom.md)
+1. [Hoisting](hoisting.md)
+1. [Inmutability](inmutability.md)
 1. [Method Chaining](chaining.md)
 1. [Namespaces](namespaces.md)
 1. [NodeJS](nodejs.md)
