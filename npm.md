@@ -19,3 +19,10 @@ Run
 ```bash
 npm-run-all <script-1> <script-2> ... <script-n>
 ```
+
+### My config
+* yarn
+* npm-check-updates
+* typescript
+* @angular/cli
+* @ionic/cli
