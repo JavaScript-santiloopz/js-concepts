@@ -1,6 +1,11 @@
 # Array methods and high order functions
 
 
+### Remove one element from certain position in an Array
+```javascript
+array.splice(indexToRemove, numberOfElements);
+```
+
 ### Swap positions in an Array
 ```javascript
 const a = ['a', 'b', 'c', 'e', 'd'];
