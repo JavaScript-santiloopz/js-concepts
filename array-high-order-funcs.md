@@ -18,11 +18,16 @@ The `Array.prototype.reduce` is a higher order function takes two values, the cu
 
 
 ### Add element to the beginning with splice
-
 ```javascript
-const colors = ['yellow', 'red']
+const colors = ['yellow', 'red'];
 
-colors.splice(0, 0, 'blue')
+colors.splice(0, 0, 'blue');
 
 //colors === ['blue', 'yellow', 'red']
+```
+
+### Shallow copy of arrays
+You can do really easy with the spread operator
+```javascript
+const copyArray = [...oldArray];
 ```
