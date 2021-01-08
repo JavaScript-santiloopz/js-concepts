@@ -24,4 +24,6 @@
 1. [Questions](questions.md)
 1. [Scopes and Closures](scopes-closures.md)
 1. [SPAs](spa.md)
+1. [Tagged Templates](tagged-templates.md)
 1. [This](this.md)
+1. [Types](types.md)
