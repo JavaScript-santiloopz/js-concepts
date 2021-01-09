@@ -6,6 +6,7 @@
 1. [Async](async.md)
 1. [Browser API](browser-api.md)
 1. [Chaining](chaining.md)
+1. [Data Structures](data-structures.md)
 1. [DOM](dom.md)
 1. [General](general.md)
 1. [Glossary](glossary.md)
