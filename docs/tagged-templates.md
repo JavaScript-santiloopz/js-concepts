@@ -24,3 +24,42 @@ You could also invoque an arbitrary number of parameters with the spread operato
 const miTaggedTemplateLiteral = (strings, ...args) => {
 	return console.log(strings, ...args);
 }
+```
+
+### Demonstration of Power
+```javascript
+const data = {
+	name: "Google Pixel L",
+	img: "http://example.com/miImagen.png",
+	cost: 699,
+};
+
+const myProduct = generaTemplate`<article>
+	<h1>${name}</h1>
+	<img src="${img}" />
+	<span>${cost} € </span>
+</article>`(data);
+
+console.log(myProduct);
+/* "<article>
+  <h1>Google Pixel L</h1>
+  <img src=http://example.com/miImagen.png />
+  <span>699 € </span>
+</article>"
+*/
+```
+And Generate Template would look like:
+```javascript
+const generaTemplate = (strings, ...keys) => {
+
+	return (data) => {
+		let temp = strings.slice();
+
+		keys.forEach((key, i) => {
+			temp[i] = temp[i] + data[key];
+		});
+
+		return temp.join('');
+	}
+}
+```
