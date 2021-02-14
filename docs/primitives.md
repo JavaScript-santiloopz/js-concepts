@@ -1,6 +1,28 @@
 # Primitives
 
-### Object
+### Find the type of any value
+You can do so with:
+```javascript
+typeof(value);
+```
+
+### Primitive Values
+
+    Undefined (undefined), used for unintentionally missing values.
+    Null (null), used for intentionally missing values.
+    Booleans (true and false), used for logical operations.
+    Numbers (-100, 3.14, and others), used for math calculations.
+    Strings ("hello", "abracadabra", and others), used for text.
+    Symbols (uncommon), used to hide implementation details.
+    BigInts (uncommon and new), used for math on big numbers.
+
+#### Intresting quirk
+```javascript
+typeof(null) === 'object';
+```
+
+### Objects and Functions
+#### Object
 Javascript objects are just `HashMap` of related properties, where the keys are Strings only.
 ```javascript
 // create an empty object - no class was needed !!
@@ -12,7 +34,7 @@ superhero.strength = 100;
 * `Object.freeze(objRef);`
 To avoid property mutation on a certain object.
 
-### Function
+#### Function
 Functions in Javascript are just values of type `Function`, it's a simple as that! 
 ```javascript
 const flyFunction = function() {  
@@ -27,87 +49,25 @@ superhero.fly = flyFunction;
 superhero.fly();
 ```
 
-### Set
+### No Other Types
+You might ask: “But what about other types I have used, like `arrays`?”
+In `JavaScript`, there are no other fundamental value types other than the ones we have just enumerated. The rest are all `objects`! For example, even `arrays`, `dates`, and `regular expressions` fundamentally are objects in JavaScript:
+```javascript
+console.log(typeof([])); // "object"
+console.log(typeof(new Date())); // "object"
+console.log(typeof(/(hello|goodbye)/)); // "object"
+```
+“I see,” you might reply, “this is because everything is an object!” Alas, this is a popular urban legend, but it’s not true. Although code like `"hi".toUpperCase()` makes `"hi"` seem like an `object`, this is nothing but an illusion. `JavaScript` creates a `wrapper object` when you do this, and **then immediately discards it**.
+
+### Collection of interesting Objects
+#### Set
 Creates a set, or collection of non reapeated elements (removed duplicates).
 ```javascript
 const mySet = new Set([1, 1, 2, 3, 4]); // keeps 1, 2, 3, 4
 ```
 
-### Promises
+#### Promises
 // TODO
 
-### Map
+#### Map
 // TODO
-
-### String
-#### Tricks
-How to Copy a String Multiple Times
-```javascript
-// Concatenate "ha" 3 times.
-const laughing = "ha".repeat(3);
-console.log(laughing); // "hahaha"
-
-// Concatenate "1" 8 times.
-const eightBits = "1".repeat(8);
-console.log(eightBits ); // "11111111
-```
-How to Pad a String to a Specific Length
-```javascript
-const eightBits = "001".padStart(8, "0");
-console.log(eightBits); // "00000001"
-
-// Add "*" to the end until the string has a length of 5.
-const anonymizedCode = "34".padEnd(5, "*");
-console.log(anonymizedCode); // "34***"
-```
-How to Copy a String Multiple Times
-```javascript
-How to Split a String Into an Array of Characters
-const word = "apple";
-const characters = [...word];
-console.log(characters); // ["a", "p", "p", "l", "e"]
-```
-How to Count Characters in a String
-```javascript
-const word = "apple";
-console.log(word.length); // 5
-```
-How to Reverse Characters in a String 
-```javascript
-const reversedWord = [...word].reverse().join("");
-```
-How to Capitalize (Uppercase) the First Letter in a String 
-```javascript
-word = word[0].toUpperCase() + word.substr(1);
-```
-How to Split a String on Multiple Separators
-```javascript
-// Let's split on comma (,) and semicolon (;).
-const list = "apples,bananas;cherries"
-const fruits = list.split(/[,;]/);
-console.log(fruits); // ["apples", "bananas", "cherries"]
-```
-How to Check If a String Contains a Specific Sequence 
-```javascript
-const text = "Hello, world! My name is Kai!"
-console.log(text.includes("Kai")); // true
-```
-How to Check If a String Starts or Ends With a Specific Sequence 
-```javascript
-const text = "Hello, world! My name is Kai!"
-
-console.log(text.startsWith("Hello")); // true
-
-console.log(text.endsWith("world")); // false
-```
-How to Replace All Occurrences of a String 
-```javascript
-const text = "I like apples. You like apples."
-
-console.log(text.replace(/apples/g, "bananas"));
-// "I like bananas. You like bananas."
-
-console.log(text.replaceAll("apples", "bananas"));
-// "I like bananas. You like bananas."
-
-```
