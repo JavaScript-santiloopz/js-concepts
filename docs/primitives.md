@@ -21,6 +21,16 @@ typeof(value);
 typeof(null) === 'object';
 ```
 
+#### Gotchas
+```javascript
+let reaction = 'yikes';
+reaction[0] = 'l';
+console.log(reaction); // This will print `yikes`
+```
+Primitive values are immutable. You can access the first array item similarly to how you would access a string’s first character. It almost feels like strings are arrays (**but they’re not!**).  
+**All primitive values are immutable**. “Immutable” is a fancy Latin way to say “unchangeable”. Read-only. You can’t mess with primitive values. At all.  
+If you attempt to set a property on a primitive value, be it a number or a string or something else, **JavaScript won’t let you do that**. Whether it will silently refuse your request or error depends on which mode (normal or strict) your code is running in.
+
 ### Objects and Functions
 #### Object
 Javascript objects are just `HashMap` of related properties, where the keys are Strings only.
