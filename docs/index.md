@@ -24,6 +24,7 @@
 1. [Primitives](primitives.md)
 1. [Prototypal Inheritance](prototypal-inheritance.md)
 1. [Questions](questions.md)
+1. [Runtime](runtime.md)
 1. [Scopes and Closures](scopes-closures.md)
 1. [SPAs](spa.md)
 1. [Tagged Templates](tagged-templates.md)
