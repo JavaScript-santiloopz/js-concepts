@@ -1,5 +1,7 @@
 # Scopes and Closures
 
+### The Global Environment
+As you know, for every JavaScript program, there is one entity named the **Global Environment**, which is the global object that contains a namespace with our global symbols and function definitions. When you declare a function in the top global context, you are implicitly binding the global environment to it, so no matter which execution context you call this function from, the reference to the **Outer Environment** of it's execution context will always be the **Global Environment**.
 
 ### Closures
 They are functions with 'memory' about the environment where they were created, simply known as: a Closure.  

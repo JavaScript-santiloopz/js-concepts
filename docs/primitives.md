@@ -8,7 +8,7 @@ typeof(value);
 
 ### Primitive Values
 
-    Undefined (undefined), used for unintentionally missing values.
+    Undefined (undefined), used for **unintentionally** missing values.
     Null (null), used for intentionally missing values.
     Booleans (true and false), used for logical operations.
     Numbers (-100, 3.14, and others), used for math calculations.
