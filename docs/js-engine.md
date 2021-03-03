@@ -1,5 +1,18 @@
 # JS Engine
 
+### Available JS Engines
+#### Google V8
+Powers the JS for `chrome` and `node`.
+
+#### Mozilla SpiderMonkey
+Powers the JS for `firefox` and there is even a `node` flavour that uses it (SpiderNode).
+
+#### Microsoft Chakra
+Powers the JS for `edge`. The main part of Chakra engine is opensourced as `ChakraCore` and there is also a `node` flavour that uses it.
+
+#### Apple's JSC (JavaScriptCore)
+Powers `safari` and `React Native`.
+
 Current JS interpreters work in a `JIT` fashion transpiling JS code to C++, which in turn gets transpiled to `C`, which goes to `Assembly Instructions`.
 
 ### Flow
