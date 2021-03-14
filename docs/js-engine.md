@@ -22,6 +22,27 @@ $ spidermonkey
 $ chakra
 $ jsc
 ```
+![JavaScript Engine Diagram](img/js2.png)
+
+#### V8
+In V8, the interpreter is named **Ignition** and the optimizing compiler is named **Turbofan**.  
+
+![V8 Engine Diagram](img/js3.png)  
+
+#### SpiderMonkey
+SpiderMonkey does it a little bit different, it has two optimizing compilers, a middle one (Baseline) which produces **Somewhat Optimized Code**, and, when possible, IonMonkey kicks in and produces Highly Optimized Code.  
+
+![SpiderMonkey Engine Diagram](img/js4.png)  
+
+#### Chakra
+Has two optimizing compilers: simpleJIT and fullJIT.
+
+![Chakra Engine Diagram](img/js5.png)  
+
+#### JSC
+Has up to THREE optimizing compilers, from LLINT (Low Level Interpreter) and the last one being FTL (Faster Than Light).
+
+![JSC Engine Diagram](img/js6.png)  
 
 ### JIT
 Current JS interpreters work in a `JIT` fashion transpiling JS code to C++, which in turn gets transpiled to `C`, which goes to `Assembly Instructions`.
