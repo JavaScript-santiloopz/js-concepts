@@ -56,3 +56,13 @@ Current JS interpreters work in a `JIT` fashion transpiling JS code to C++, whic
 ### Flow
 When you run JavaScript, it will create a `Global Execution Context` for you, containing the `this` keyword and appending all the symbol names to the Global Object (window in case of the browser).  
 Whenever you find a new Function Call, it will create a new, scoped Execution Context for that function.
+
+### Hot code
+Code that has run at least a couple of times so it is understood that it is a good point for optimizing.
+
+### Understanding the tradeoff
+Bytecode is really quick to generate but is far from optimal, whereas Highly Optimized Code is slooooow to generate but ends up being faster than light:
+
+![JSC Tradeoff](img/js7.png)  
+
+In V8, you have Ignition for the bytecode and TurboFan for the highly optimized code.
