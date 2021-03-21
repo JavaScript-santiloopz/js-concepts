@@ -42,7 +42,19 @@ superhero.name = 'Superman';
 superhero.strength = 100;
 ```
 * `Object.freeze(objRef);`
-To avoid property mutation on a certain object.
+To avoid property mutation on a certain object.  
+
+It is common to think that Objects in JavaScript are Maps that map string keys to values, but has a little bit more to that:
+
+![Object keys properties](img/js8.png)  
+
+It really maps to this bucket of property attributes, other than the value, it maps to:
+* `[[Value]]` the actual value
+* `[[Writable]]` value, which states wether the property can be assigned
+* `[[Enumerable]]` the property fits in `for ... in` loops 
+* `[[Configurable]]` the property can be deleted
+
+You can access this bucket witht the API `Object.getOwnPropertyDescriptor()`.
 
 #### Function
 Functions in Javascript are just values of type `Function`, it's a simple as that! 

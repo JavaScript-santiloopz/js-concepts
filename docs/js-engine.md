@@ -66,3 +66,11 @@ Bytecode is really quick to generate but is far from optimal, whereas Highly Opt
 ![JSC Tradeoff](img/js7.png)  
 
 In V8, you have Ignition for the bytecode and TurboFan for the highly optimized code.
+
+### Shape of Objects
+The compiler keeps shapes of objects whose structure matches, keeping all the structure of each of it's values:
+* `[[Value]]` -> Not keept
+* `[[Writable]]`
+* `[[Enumerable]]`
+* `[[Configurable]]`
+Except the value, which is replaced by an [[Offset]] which points where can we find the value of this specific instance of the Shape. A Shape is basically an object structure which is reapeted several times in the code.
