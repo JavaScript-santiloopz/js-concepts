@@ -16,6 +16,9 @@ typeof(value);
     Symbols (uncommon), used to hide implementation details.
     BigInts (uncommon and new), used for math on big numbers.
 
+### Numbers
+ECMAScript standardizes numbers as `double precision float 64`. But to avoid having to store ALL numbers in such a space consuming format, engines have some freedom to choose internal representations, so internally they tend to represent integer numbers as 32 compliment numbers.
+
 #### Intresting quirk
 ```javascript
 typeof(null) === 'object';
@@ -82,6 +85,10 @@ console.log(typeof(/(hello|goodbye)/)); // "object"
 “I see,” you might reply, “this is because everything is an object!” Alas, this is a popular urban legend, but it’s not true. Although code like `"hi".toUpperCase()` makes `"hi"` seem like an `object`, this is nothing but an illusion. `JavaScript` creates a `wrapper object` when you do this, and **then immediately discards it**.
 
 ### Collection of interesting Objects
+#### Array
+The ECMAScript definition defines an array to be accessible for any number from `0 to (2^32)-2`. So array indexes are limited to the 32 bits range.  
+Because of the internals on how CPUs handle numbers, doing a for loop over integer values is much much faster that doing it over floating numbers.
+
 #### Set
 Creates a set, or collection of non reapeated elements (removed duplicates).
 ```javascript
