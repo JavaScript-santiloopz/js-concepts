@@ -34,3 +34,19 @@ There are different ways:
 ```javascript
 const newObj = Object.assign({}, objToClone);
 ```
+
+### Immutability tricks
+```javascript
+const newObj = { foo: 'bar' };
+
+// disables the haebility to add new properties to an object
+Object.preventExtension(newObj);
+
+// Same as prevent extension but also prevents you from deleting properties or changing the nature of
+// them, NOTE, the values can still be changed, but the configurable JS engine representation of them
+// will be disabled
+Object.seal(newObj);
+
+// The most extreme of them, makes the object fully immutable
+Object.freeze(newObj);
+```
