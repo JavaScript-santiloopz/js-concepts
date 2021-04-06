@@ -18,6 +18,8 @@ typeof(value);
 
 ### Numbers
 ECMAScript standardizes numbers as `double precision float 64`. But to avoid having to store ALL numbers in such a space consuming format, engines have some freedom to choose internal representations, so internally they tend to represent integer numbers as 32 compliment numbers.
+This table illustrates the possibilities:
+![js11](img/js11.png)  
 
 #### Intresting quirk
 ```javascript
