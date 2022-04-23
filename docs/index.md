@@ -14,6 +14,7 @@
 1. [JWT](jwt.md)
 1. [Immutability](immutability.md)
 1. [JS Engine](js-engine.md)
+1. [Learning Resources](learning-resources.md)
 1. [Method Chaining](chaining.md)
 1. [Namespaces](namespaces.md)
 1. [NodeJS](nodejs.md)
